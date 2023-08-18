@@ -52,7 +52,7 @@ func TestApp0(t *testing.T) {
 
 	// 下载license
 	download := "/html/body/div[1]/div/section/section/main/section/main/div/div/div[1]/div/div/form/div[9]/div[2]/div/button/span"
-	timeBeforDown := time.Now()
+	timeBeforDown := time.Now().Local()
 	err = public.WaitAndDo(wdLicense, public.EleClickByXpath, download)
 	assert.Equal(t, err, nil)
 
